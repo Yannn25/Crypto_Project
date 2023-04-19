@@ -1,0 +1,1 @@
+Ceci est un texte vraiment court, et la fréquence ici ne sera pas bien représentative : mais au moins, ça prouve que le formattage fonctionne à merveille.

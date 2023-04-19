@@ -1,9 +1,23 @@
 import random
-from sympy import nextprime
+
+def primesInRange(x, y):
+    prime_list = []
+    for n in range(x, y):
+        isPrime = True
+        for num in range(2, n):
+            if n % num == 0:
+                isPrime = False
+
+        if isPrime:
+            prime_list.append(n)
+            
+    return prime_list
+
 
 def generate(m, k):
     # Trouver un nombre premier p adapté
-    p = nextprime(m)
+    prime_list = primesInRange(m,100)
+    p = random.choice(prime_list)
 
     # Définir les coefficients du polynôme
     a = [random.randint(1, p-1) for i in range(k)]
@@ -51,9 +65,9 @@ def coalition(p, k, shares):
 
 
 # Définir les paramètres
-m = 9
+m = 4
 k = 2
-secret = 3
+secret = 225
 print("Secret de base : ",secret)
 
 # Générer le nombre premier p et les coefficients du polynôme
