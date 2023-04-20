@@ -1,12 +1,16 @@
-# algo naif, si aucune valeur de x ne satisfait l'équation alors boulce infini
-def naif(g, y, p):
-    x = 1
-    gx = g
-    while gx != y:
-        x += 1
-        gx = (gx * g) % p
-    return x
+def loga_d(g, y, p):
 
+    l=[]
+    for x in range(p-1):
+        l.append(pow(g, x)%p)
+
+    
+    for x in range(len(l)):
+        if y == l[x]:
+            return x
+    return None
+
+print(loga_d(3, 4, 7))
 
 
 
