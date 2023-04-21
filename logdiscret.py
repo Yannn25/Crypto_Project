@@ -43,11 +43,11 @@ print("Temps d'exécution:", end_time - start_time, "secondes")
 
 
 start_time1 = time.time()
-y = log_naif(g, y, p)
+n = log_naif(g, y, p)
 end_time1 = time.time()
 
-if y is not None:
-    print(f"Le logarithme discret de {y} en base {g} modulo {p} est {y}")
+if n is not None:
+    print(f"Le logarithme discret de {y} en base {g} modulo {p} est {n}")
 else:
     print("Aucune solution trouvée")
 print("Temps d'exécution:", end_time1 - start_time1, "secondes")
